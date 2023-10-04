@@ -19,12 +19,12 @@ public class Main {
     public static void main(String[] args) {
         ArrayList<Token> tabela_tokens = new ArrayList<Token>();
         String path = "/home/luca/IdeaProjects/Compiladores/src/";
-        String fileName = "ex1.cic";
+        String fileName = "ex3.cic";
         ArrayList<String> saida_erros = new ArrayList<String>();
         tabela_tokens = analisadorLexico(path+fileName, saida_erros);
-        geraArquivoSaidaI(tabela_tokens);
-        geraArquivoSaidaII(saida_erros);
-        geraArquivoSaidaIII(tabela_tokens);
+        geraArquivoSaidaI(tabela_tokens,fileName);
+        geraArquivoSaidaII(saida_erros,fileName);
+        geraArquivoSaidaIII(tabela_tokens,fileName);
     }
 
     public static ArrayList<Token> analisadorLexico(String path, ArrayList<String> saida_erros){
@@ -704,8 +704,8 @@ public class Main {
         }
     }
 
-    public static void geraArquivoSaidaI(ArrayList<Token> tabela_tokens){
-        String path = "/home/luca/IdeaProjects/Compiladores/src/Saída I";
+    public static void geraArquivoSaidaI(ArrayList<Token> tabela_tokens, String filename){
+        String path = "/home/luca/IdeaProjects/Compiladores/src/Saída I-"+filename;
         try(BufferedWriter bw = new BufferedWriter(new FileWriter(path))){
             bw.write("+-----+------+--------------+-----------------------+");
             bw.newLine();
@@ -726,8 +726,8 @@ public class Main {
         System.out.println("Saída I gerada com sucesso!");
     }
 
-    public static void geraArquivoSaidaII(ArrayList<String> saida_erros){
-        String path = "/home/luca/IdeaProjects/Compiladores/src/Saída II";
+    public static void geraArquivoSaidaII(ArrayList<String> saida_erros,String filename){
+        String path = "/home/luca/IdeaProjects/Compiladores/src/Saída II-"+filename;
 
         try(BufferedWriter bw = new BufferedWriter(new FileWriter(path))){
             Integer tamanho_array = saida_erros.size();
@@ -741,8 +741,8 @@ public class Main {
         System.out.println("Saída II gerada com sucesso!");
     }
 
-    public static void geraArquivoSaidaIII(ArrayList<Token> tabela_tokens){
-        String path = "/home/luca/IdeaProjects/Compiladores/src/Saída III";
+    public static void geraArquivoSaidaIII(ArrayList<Token> tabela_tokens, String filename){
+        String path = "/home/luca/IdeaProjects/Compiladores/src/Saída III-"+filename;
 
         HashMap<String, Integer> tabela_auxiliar = new HashMap<String, Integer>();
         Integer contador = 0;

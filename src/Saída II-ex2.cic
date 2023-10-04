@@ -1,0 +1,24 @@
+[0]# Ex-02-incorreto.cic
+[1]
+[2]programa
+[3]     imprima("Digite um
+   _____________^
+   Erro léxico na linha 3 coluna 12:Cadeia não fechada
+[3]     nro")
+   _____^
+   Erro léxico na linha 3 coluna 4:Palavra Reservada não encontrada
+[3]     nro")
+   ________^
+   Erro léxico na linha 3 coluna 7:Cadeia não fechada
+[3]    leia(<num>)
+[4]     <1soma> := <3a> + R$23.3
+   _______^
+   Erro léxico na linha 4 coluna 6:Palavra Reservada não encontrada
+[4]     <1soma> := <3a> + R$23.3
+   __________________^
+   Erro léxico na linha 4 coluna 17:Palavra Reservada não encontrada
+[4]     <1soma> := <3a> + R$23.3
+   _______________________^
+   Erro léxico na linha 4 coluna 22:Moeda Mal Formatada
+[4]    imprima(<raiz>)
+[5]fim_programa
