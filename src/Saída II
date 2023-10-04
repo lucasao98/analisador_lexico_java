@@ -1,29 +1,6 @@
-[0] ''' Ex-03-incorreto.cic
-   _^
-   Erro léxico na linha 0 coluna 0:Linha de comentário não finalizada
-[1]
-[2] Programa
-   _^
-   Erro léxico na linha 2 coluna 0:Moeda Mal Formatada
-[2] Programa
-   __^
-   Erro léxico na linha 2 coluna 1:Palavra Reservada não encontrada
-[2]    leia(<a>)
-[3]    <soma> := <a> + R$23.34
-[4]     se <a> <= <b> então
-   ___________________^
-   Erro léxico na linha 4 coluna 18:Palavra Reservada não encontrada
-[4]     se <a> <= <b> então
-   ___________________^
-   Erro léxico na linha 4 coluna 18:Token não reconhecido
-[4]     se <a> <= <b> então
-   _______________________^
-   Erro léxico na linha 4 coluna 22:Palavra Reservada não encontrada
-[4]        imprima(34F.34e23A)
-[5]     imprima("Fim prog"rama") 	
-   _______________________^
-   Erro léxico na linha 5 coluna 22:Palavra Reservada não encontrada
-[5]     imprima("Fim prog"rama") 	
-   ___________________________^
-   Erro léxico na linha 5 coluna 26:Cadeia não fechada
+[0]programa
+[1]    imprima("Digite um nro")
+[2]    leia(<numero>)
+[3]    <soma> := <a> + 8D.3
+[4]    imprima(<raiz>)
 [5]fim_programa

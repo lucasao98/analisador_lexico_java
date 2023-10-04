@@ -19,7 +19,7 @@ public class Main {
     public static void main(String[] args) {
         ArrayList<Token> tabela_tokens = new ArrayList<Token>();
         String path = "/home/luca/IdeaProjects/Compiladores/src/";
-        String fileName = "ex3.cic";
+        String fileName = "ex1.cic";
         ArrayList<String> saida_erros = new ArrayList<String>();
         tabela_tokens = analisadorLexico(path+fileName, saida_erros);
         geraArquivoSaidaI(tabela_tokens);
